@@ -1,1 +1,1 @@
-Replacing lucky.txt importing project to text editor. 
+We are updating from the server and pushing to github for our initial connection test!

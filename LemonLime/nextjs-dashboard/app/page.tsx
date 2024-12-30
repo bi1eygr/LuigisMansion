@@ -18,7 +18,7 @@ export default function Page() {
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Sign Up Here!
             </a>
-            , brought to you by The Boys.
+            brought to you by The Boys.
           </p>
           <Link
             href="/login"

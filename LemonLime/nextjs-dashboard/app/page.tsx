@@ -18,8 +18,8 @@ export default function Page() {
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Sign Up Here!
             </a>
-            brought to you by The Boys.
           </p>
+          <p>brought to you by The Boys.</p>
           <Link
             href="/login"
             className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"

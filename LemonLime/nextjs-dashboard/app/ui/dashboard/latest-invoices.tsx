@@ -59,6 +59,6 @@ export default async function LatestInvoices({
           <h3 className="ml-2 text-sm text-gray-500 ">Updated just now</h3>
         </div>
       </div>
-    </  >
+    
   );
 }

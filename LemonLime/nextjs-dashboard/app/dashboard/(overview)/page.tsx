@@ -10,7 +10,7 @@ import {
 } from '@/app/ui/skeletons';
  
 export default async function Page() {
-  const latestInvoices = await fetchLatestInvoices();
+  
   const {
     numberOfInvoices, 
     numberOfCustomers, 

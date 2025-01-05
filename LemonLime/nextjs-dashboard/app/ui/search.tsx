@@ -8,8 +8,7 @@ export default function Search() {
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  function handleSearch(term: string) {
-    console.log(`Searching... ${term}`);
+    function handleSearch(term: string) {
     const params = new URLSearchParams(searchParams);
     if (term) {
       params.set('query', term);
@@ -18,7 +17,7 @@ export default function Search() {
     }
     replace(`${pathname}?${params.toString()}`);
   }
-}
+
 
   return (
     <div className="relative flex flex-1 flex-shrink-0">
@@ -31,7 +30,6 @@ export default function Search() {
         onChange={(e) => {
           handleSearch(e.target.value);
         }}
-        defaultValue={searchParams.get('query')?.toString()}
       />
       <MagnifyingGlassIcon className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
     </div>

@@ -1,5 +1,6 @@
 'use client';
-import { useActionState } from 'react';
+
+import { CustomerField, InvoiceForm } from '@/app/lib/definitions';
 import {
   CheckIcon,
   ClockIcon,
@@ -8,8 +9,8 @@ import {
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Button } from '@/app/ui/button';
-import { CustomerField, InvoiceForm } from '@/app/lib/definitions';
 import { updateInvoice, State } from '@/app/lib/actions';
+import { useActionState } from 'react';
 
 export default function EditInvoiceForm({
   invoice,
@@ -146,7 +147,6 @@ export default function EditInvoiceForm({
             <p className="my-2 text-sm text-red-500">{state.message}</p>
           ) : null}
         </div>
-      </div>
       </div>
       <div className="mt-6 flex justify-end gap-4">
         <Link

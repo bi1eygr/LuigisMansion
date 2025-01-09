@@ -1,7 +1,6 @@
 'use server';
 import { z } from 'zod';
 import { sql } from '@vercel/postgres';
-import { useActionState } from 'react';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
@@ -22,6 +21,15 @@ const FormSchema = z.object({
  
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
 const UpdateInvoice = FormSchema.omit({ id: true, date: true });
+
+export type State = {
+  errors?: {
+    customerId?: string[];
+    amount?: string[];
+    status?: string[];
+  };
+  message?: string | null;
+};
 
 export async function createInvoice(prevState: State, formData: FormData) {
   const validatedFields = CreateInvoice.safeParse({

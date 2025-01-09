@@ -29,7 +29,8 @@ export default function Form({ customers }: { customers: CustomerField[]; }) {
               id="customer"
               name="customerId"
               className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
-              defaultValue="" aria-describedby="customer-error"
+              defaultValue="" 
+              aria-describedby="customer-error"
             >
               <option value="" disabled>
                 Select a customer
@@ -49,8 +50,8 @@ export default function Form({ customers }: { customers: CustomerField[]; }) {
               {error}
             </p>
           ))}
-      </div>
         </div>
+      </div>
 
         {/* Invoice Amount */}
         <div className="mb-4">
